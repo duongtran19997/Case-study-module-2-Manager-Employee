@@ -1,44 +1,44 @@
 export class Employee {
-    private _id:string;
-    private _name:string;
-    private _budget:string;
-    private _email:string;
+    id:string;
+    name:string;
+    budget:string;
+    email:string;
     constructor(id,name,budget,email) {
-        this._name=name;
-        this._id=id;
-        this._budget=budget;
-        this._email=email;
+        this.name=name;
+        this.id=id;
+        this.budget=budget;
+        this.email=email;
     }
 
     getid(): string {
-        return this._id;
+        return this.id;
     }
 
     setid(value: string) {
-        this._id = value;
+        this.id = value;
     }
 
     getname(): string {
-        return this._name;
+        return this.name;
     }
 
     setname(value: string) {
-        this._name = value;
+        this.name = value;
     }
 
     getbudget(): string {
-        return this._budget;
+        return this.budget;
     }
 
     setbudget(value: string) {
-        this._budget = value;
+        this.budget = value;
     }
 
     getemail(): string {
-        return this._email;
+        return this.email;
     }
 
     setemail(value: string) {
-        this._email = value;
+        this.email = value;
     }
 }

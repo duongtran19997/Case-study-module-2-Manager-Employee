@@ -4,9 +4,9 @@ Login.addEventListener('click',()=>{
     let pass = (document.getElementById('form2Example27') as HTMLInputElement).value;
     let data = JSON.parse(localStorage.getItem('data'))
     let boolean= false
-    data.forEach((value,index)=>{
+    data.forEach((value)=>{
         if(value.email ==email&&value.pass==pass){
-            window.location.href = "../views/index.html"
+            window.location.href = "../views/index.html";
             boolean=true
         }else{
             boolean=false

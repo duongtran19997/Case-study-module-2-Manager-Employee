@@ -3,8 +3,8 @@
     "module": "es2022",
     "target": "es5",
     "sourceMap": true,
-    "match": true,
-    "outDir": "/public"
+    "watch": true,
+    "outDir": "./public"
   },
   "exclude": [
     "node_modules"
