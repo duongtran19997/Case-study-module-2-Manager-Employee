@@ -1,8 +1,10 @@
 import { EmployeeManager } from "./EmployeeManager.js";
 var manager = new EmployeeManager();
-manager.addEmployee('0007', 'Cristiano Ronaldo', 531000, 'gg@gmail.com');
-manager.addEmployee('0010', 'Lionel Messi', 1325000, 'gg@gmail.com');
-manager.addEmployee('0011', 'Gareth Bale', 690000, 'gg@gmail.com');
+manager.addEmployee('0007', 'Cristiano Ronaldo', 531000, 'Cr7@ManchesterUnited.com');
+manager.addEmployee('0010', 'Lionel Messi', 1325000, 'M30@Barcelona.com');
+manager.addEmployee('0011', 'Gareth Bale', 690000, 'B11@RealMadrid.com');
+manager.addEmployee('0009', 'Ronaldo de Lima', 381000, 'R9@InterMilan.com');
+manager.addEmployee('0013', 'Alessandro Nesta', 130000, 'AN13@AcMilan.com');
 manager.showList();
 var btn = document.getElementById('add');
 btn.addEventListener("click", addEmployee);
@@ -101,4 +103,12 @@ function fixed() {
     });
 }
 fixed();
+function sort() {
+    var sortBudget = document.getElementById('sortBudget');
+    sortBudget.addEventListener('click', function () {
+        manager.selectionSort();
+        manager.showList();
+    });
+}
+sort();
 //# sourceMappingURL=add.js.map

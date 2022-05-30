@@ -14,7 +14,8 @@ Login.addEventListener('click', function () {
         }
     });
     if (boolean === false) {
-        alert('something wrong, replace');
+        var html = "<p>Wrong email or password!!!</p>";
+        document.getElementById('wrong-pass').innerHTML = html;
     }
 });
 //# sourceMappingURL=Login.js.map

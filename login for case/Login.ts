@@ -13,6 +13,7 @@ Login.addEventListener('click',()=>{
         }
     })
     if(boolean===false){
-        alert('something wrong, replace')
+        let html= `<p>Wrong email or password!!!</p>`
+        document.getElementById('wrong-pass').innerHTML = html
     }
 })

@@ -70,6 +70,23 @@ var EmployeeManager = /** @class */ (function () {
             this.showList();
         }
     };
+    EmployeeManager.prototype.selectionSort = function () {
+        var currentEmployeeNewIndex;
+        for (var i = 0; i < this.employeeManager.length; i++) {
+            currentEmployeeNewIndex = i;
+            for (var j = i + 1; j < this.employeeManager.length; j++) {
+                if (this.employeeManager[currentEmployeeNewIndex].budget < this.employeeManager[j].budget) {
+                    currentEmployeeNewIndex = j;
+                }
+            }
+            if (i != currentEmployeeNewIndex) {
+                var temp = this.employeeManager[i];
+                this.employeeManager[i] = this.employeeManager[currentEmployeeNewIndex];
+                this.employeeManager[currentEmployeeNewIndex] = temp;
+            }
+        }
+        return this.employeeManager;
+    };
     return EmployeeManager;
 }());
 export { EmployeeManager };

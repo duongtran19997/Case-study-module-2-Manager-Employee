@@ -33,12 +33,12 @@ signUp.addEventListener('click', () => {
             window.location.href = 'signup.html'
         } else if (email === '' || password === '' || password1 === '') {
             alert('please fill information')
-            window.location.href = 'signup.html'
+            window.location.href = 'signup.html';
         } else {
-            users.push(new User(email, password))
-            localStorage.setItem('data', JSON.stringify(users))
-            alert('Sign Up Success')
-            window.location.href = 'login.html'
+            users.push(new User(email, password));
+            localStorage.setItem('data', JSON.stringify(users));
+            alert('Sign Up Success');
+            window.location.href = 'login.html';
         }
     }
 

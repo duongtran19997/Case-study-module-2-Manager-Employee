@@ -1,9 +1,11 @@
 import {EmployeeManager} from "./EmployeeManager.js";
 
 let manager = new EmployeeManager()
-manager.addEmployee('0007', 'Cristiano Ronaldo', 531000, 'gg@gmail.com')
-manager.addEmployee('0010', 'Lionel Messi', 1325000, 'gg@gmail.com')
-manager.addEmployee('0011', 'Gareth Bale', 690000, 'gg@gmail.com')
+manager.addEmployee('0007', 'Cristiano Ronaldo', 531000, 'Cr7@ManchesterUnited.com')
+manager.addEmployee('0010', 'Lionel Messi', 1325000, 'M30@Barcelona.com')
+manager.addEmployee('0011', 'Gareth Bale', 690000, 'B11@RealMadrid.com')
+manager.addEmployee('0009', 'Ronaldo de Lima', 381000, 'R9@InterMilan.com')
+manager.addEmployee('0013', 'Alessandro Nesta', 130000, 'AN13@AcMilan.com')
 manager.showList()
 let btn = document.getElementById('add') as HTMLButtonElement;
 
@@ -107,3 +109,13 @@ function fixed(){
 
 }
 fixed()
+    function sort() {
+
+    let sortBudget = document.getElementById('sortBudget') as HTMLButtonElement
+    sortBudget.addEventListener('click',()=>{
+        manager.selectionSort()
+        manager.showList()
+
+    })
+    }
+    sort()
